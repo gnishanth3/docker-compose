@@ -2,6 +2,8 @@ version: '3'
 services: 
   web:
     image: gnishanth3/apache2:2.0
+    deploy:
+      replicas: 5
     ports:
      - "8080:80"
     networks:
