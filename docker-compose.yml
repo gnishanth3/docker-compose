@@ -1,0 +1,13 @@
+version: '3'
+services: 
+  web:
+    image: gnishanth3/apache2:2.0
+    deploy: 5
+    restart_policy:
+      condition: on-failure
+    ports:
+     - "8080:80"
+    networks:
+     - webnet
+networks:
+    webnet:      
